@@ -35,7 +35,7 @@ if(!$result === false): ?>
             <td><?=$mahasiswa['tgl_lahir']?></td>
             <td>
                 <a href="detail.php?id=<?=$mahasiswa['id']?>">Detail</a> |
-                <a href="delete.php">Delete</a>
+                <a href="delete.php?id=<?=$mahasiswa['id']?>">Delete</a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -7,7 +7,7 @@
 include "connection.php";
 $id = $_GET['id'];
 
-$query = "select * from mahasiswa where id = ?";
+$query = "SELECT * FROM mahasiswa WHERE id = ?";
 $result = $connection->prepare($query);
 $result->execute([$id]);
 if($result->rowCount() === 1){
