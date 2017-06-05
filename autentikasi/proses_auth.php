@@ -16,6 +16,7 @@ $result->execute(array(
     'no_rekening' => $noRekening,
     'password' => hash('sha1', $passsord)
 ));
+//Memastikan hasil query adalah 1 record
 if($result->rowCount() === 1){
     $nasabah = $result->fetch();
     //set session
@@ -24,4 +25,5 @@ if($result->rowCount() === 1){
     header('location: page1.php');
 }else{
     echo 'Data tidak ditemukan';
+    include_once 'auth.php';
 }
