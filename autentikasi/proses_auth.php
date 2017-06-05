@@ -16,10 +16,11 @@ $result->execute(array(
     'no_rekening' => $noRekening,
     'password' => hash('sha1', $passsord)
 ));
-if($result->rowCount() == 1){
+if($result->rowCount() === 1){
     $nasabah = $result->fetch();
     //set session
     $_SESSION['nama_nasabah'] = $nasabah['nama'];
+    //move to user page
     header('location: page1.php');
 }else{
     echo 'Data tidak ditemukan';
